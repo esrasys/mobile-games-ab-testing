@@ -46,6 +46,54 @@ Main variables include:
 
 5. Recommendation  
    - translated the experiment results into a practical product decision
+  
+
+
+     ## Key Findings
+
+The experiment analyzed 90,189 players assigned to two versions of Cookie Cats: `gate_30` (control) and `gate_40` (treatment).
+
+### Retention Analysis
+
+| Metric | gate_30 | gate_40 | P-value |
+|---|---:|---:|---:|
+| Day 1 retention | 44.82% | 44.23% | 0.0744 |
+| Day 7 retention | 19.02% | 18.20% | 0.00155 |
+
+- **Day 1:** The observed difference was not statistically significant at the 5% level.
+- **Day 7:** The control group achieved significantly higher retention, with an absolute advantage of approximately 0.82 percentage points.
+- The Day 7 finding remained statistically significant after applying a Bonferroni correction for the two retention tests.
+
+### Player Activity and Outlier Analysis
+
+The original average number of rounds played was 52.46 for `gate_30` and 51.30 for `gate_40`.
+
+However, the dataset contained an extreme observation of 49,854 rounds. After excluding this observation in a sensitivity analysis, the group means became almost identical (51.34 versus 51.30).
+
+This indicates that the original difference in average activity was largely influenced by one extreme observation.
+
+### Bayesian Analysis
+
+A Bayesian beta-binomial model was used to evaluate retention differences.
+
+The posterior probability that `gate_30` achieved higher Day 7 retention was approximately 99.92%, under the specified priors and model.
+
+The Bayesian results support the direction of the frequentist findings but do not establish the commercial significance of the difference.
+
+### Business Recommendation
+
+**Maintain the first progression gate at level 30.**
+
+The treatment did not demonstrate improved Day 1 retention and was associated with statistically significantly lower Day 7 retention.
+
+The findings suggest that moving the progression gate to a later level does not necessarily improve player engagement.
+
+### Limitations
+
+- The dataset does not contain revenue or monetization metrics.
+- Retention analysis is limited to Day 1 and Day 7.
+- Extreme observations influence mean-based activity comparisons.
+- The analysis does not identify the underlying behavioral causes of the retention differences.
 
 ## Key Findings
 
